@@ -12,11 +12,7 @@ class Recommend:
         temp = temp.split('-')
         return temp
     
-    def titleToPoster(self, movie_title):
-        base_domain = 'https://image.tmdb.org/t/p/w500'
-        image_links = base_domain + self.df.loc[self.df['title'] == movie_title, 'poster_path'].iloc[0]
-        image_widget = Image(url=image_links, width=200, height=300)
-        display(image_widget)
+    
 
     def getRecTitles1 (self, title):
         matching_rows = self.df['title'] == title

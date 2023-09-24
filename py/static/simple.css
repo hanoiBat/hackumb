@@ -9,7 +9,7 @@
   --standard-border-radius: 5px;
 
   /* Default (light) theme */
-  --bg: #fff;
+  --bg: #FFA500;
   --accent-bg: #f5f7ff;
   --text: #212121;
   --text-light: #585858;
@@ -24,6 +24,7 @@
 body {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 .scroll-wrapper {
@@ -78,6 +79,11 @@ html {
   font-family: var(--sans-font);
   scroll-behavior: smooth;
 }
+#recommendationRedirector{
+  display:grid;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Make the body a nice central block */
 body {
@@ -86,7 +92,7 @@ body {
   font-size: 1.15rem;
   line-height: 1.5;
   display: grid;
-  grid-template-columns: 1fr min(45rem, 90%) 1fr;
+  grid-template-columns: 1fr min(50rem, 90%) 1fr;
   margin: 0;
 }
 body > * {
@@ -100,6 +106,13 @@ body > header {
   text-align: center;
   padding: 0 0.5rem 2rem 0.5rem;
   grid-column: 1 / -1;
+}
+
+#menuBarItem{
+  background-color: #0d47a1;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: midnightblue;
 }
 
 body > header h1 {
@@ -722,4 +735,21 @@ dialog::backdrop {
   border-radius: 5px;
   padding: 1.5rem;
   margin: 2rem 0;
+}
+
+
+.movieposter{
+  float: right;
+  width: 171px;
+  height: 256px;
+}
+
+@keyframes highlight{
+  from{background-color: #0d47a1;}
+  to{background-color: #444;}
+}
+
+#title{
+  margin:0;
+  padding: 0;
 }

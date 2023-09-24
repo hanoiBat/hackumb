@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/static/simple.css" />
 </head>
 <body>
     <div id="titlebar">
@@ -12,32 +13,49 @@
             <a href="{{url_for('index')}}"><h1 id="websitename">Movie Recommendation System</h1></a>
         </div>
         <div id="menuBar">
-            <a href="url_for('recommendation')" id="menuBarItem">Reccomendations</a> 
-            <a href="" id="menuBarItem">Top Rated</a>
+            <a href="{{url_for('recommendation')}}" id="menuBarItem">Recommendations</a> 
+
         </div>
 
     </div>
 
-    <div class="container">
-        <div onclick="location.href='html/moviepage.html'" id="movieBox">
+    <div class="containermovie">
+        <div onclick="location.href='html/moviepage.html'" class="movieBox">
+            <img id="movieImage" class="movieposter" src="{{i0}}">
             <h3 id="movieBoxTitle"->{{t1}}</h3>
             <p id="movieBoxDate">{{re1}}</p>
             <p id="movieBoxRating">{{r1}}</p>
             <p id="movieBoxDescription">{{d1}}</p>
+            
         </div>
-        <div onclick="location.href='html/moviepage.html'" id="movieBox">
+        <div onclick="location.href='html/moviepage.html'" class="movieBox">
+            <img id="movieImage" class="movieposter" src="{{i1}}">
             <h3 id="movieBoxTitle">{{t2}}</h3>
             <p id="movieBoxDate">{{re2}}</p>
             <p id="movieBoxRating">{{r2}}</p>
             <p id="movieBoxDescription">{{d2}}</p>
         </div>
-        <div onclick="location.href='html/moviepage.html'" id="movieBox">
+        <div onclick="location.href='html/moviepage.html'" class="movieBox">
+            <img id="movieImage" class="movieposter" src="{{i2}}">
             <h3 id="movieBoxTitle">{{t3}}</h3>
             <p id="movieBoxDate">{{re3}}</p>
             <p id="movieBoxRating">{{r3}}</p>
             <p id="movieBoxDescription">{{d3}}</p>
         </div>
-        
+        <div onclick="location.href='html/moviepage.html'" class="movieBox">
+            <img id="movieImage" class="movieposter" src="{{i3}}">
+            <h3 id="movieBoxTitle">{{t4}}</h3>
+            <p id="movieBoxDate">{{re4}}</p>
+            <p id="movieBoxRating">{{r4}}</p>
+            <p id="movieBoxDescription">{{d4}}</p>
+        </div>
+        <div onclick="location.href='html/moviepage.html'" class="movieBox">
+            <img id="movieImage" class="movieposter" src="{{i4}}">
+            <h3 id="movieBoxTitle">{{t5}}</h3>
+            <p id="movieBoxDate">{{re5}}</p>
+            <p id="movieBoxRating">{{r5}}</p>
+            <p id="movieBoxDescription">{{d5}}</p>
+        </div>
     </div>
 </body>
 </html>
