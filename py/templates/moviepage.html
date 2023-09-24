@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <title>Movie Recommendation System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="titlebar">
+        <div id = "title">
+            <a href="{{get_url('index')}}"><h1 id="websitename">Movie Recommendation System</h1></a>
+        </div>
+        <div id="menuBar">
+            <a href="{{get_url('reccomendations')}}" id="menuBarItem">Reccomendations</a> 
+            <a href="{{get_url('')}}" id="menuBarItem">Top Rated</a>
+        </div>
+
+
+    </div>
+    <div id="movieContainer">
+        <div id="movieContainerItem">
+            <h1 class="containerItem" id="movieName">{{name}}</h1>
+            <h4 class="containerItem" id="movieReleaseDate">{{releaseDate}}</h4>
+            <h4 class="containerItem" id="movieRating">{{rating}}</h4>
+            <h4 class="containerItem" id="movieTags">{{tags}}</h4>
+            <h4 class="containerItem" id="movieDescription">{{description}}</h4>
+            <h5 class="containerItem" id="movieCast">{{cast}}</h5>
+        </div>
+        <div id="movieContainerItem">
+            <img id="movieImage" src="https://www.imdb.com/title/tt4154796/mediaviewer/rm2775147008/?ref_=tt_ov_i"/>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

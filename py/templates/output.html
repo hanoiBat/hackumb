@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="titlebar">
+        <div id = "title">
+            <a href="{{url_for('index')}}"><h1 id="websitename">Movie Recommendation System</h1></a>
+        </div>
+        <div id="menuBar">
+            <a href="url_for('recommendation')" id="menuBarItem">Reccomendations</a> 
+            <a href="" id="menuBarItem">Top Rated</a>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div onclick="location.href='html/moviepage.html'" id="movieBox">
+            <h3 id="movieBoxTitle"->{{t1}}</h3>
+            <p id="movieBoxDate">{{re1}}</p>
+            <p id="movieBoxRating">{{r1}}</p>
+            <p id="movieBoxDescription">{{d1}}</p>
+        </div>
+        <div onclick="location.href='html/moviepage.html'" id="movieBox">
+            <h3 id="movieBoxTitle">{{t2}}</h3>
+            <p id="movieBoxDate">{{re2}}</p>
+            <p id="movieBoxRating">{{r2}}</p>
+            <p id="movieBoxDescription">{{d2}}</p>
+        </div>
+        <div onclick="location.href='html/moviepage.html'" id="movieBox">
+            <h3 id="movieBoxTitle">{{t3}}</h3>
+            <p id="movieBoxDate">{{re3}}</p>
+            <p id="movieBoxRating">{{r3}}</p>
+            <p id="movieBoxDescription">{{d3}}</p>
+        </div>
+        
+    </div>
+</body>
+</html>

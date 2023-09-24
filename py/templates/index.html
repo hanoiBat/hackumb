@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/simple.css" />
+    <title>Movie Recommendation System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script type="text/javascript" href="js/index.js"></script>
+
+    <script>
+        function doShit(){
+            var myData = document.getElementById("searchInput").value;
+            sessionStorage.setItem('objectToPass', myData);
+            window.location.href="html/search.html";
+        }
+    </script>
+
+    <div id="titlebar">
+        <div id = "title">
+            <h1>Movie Recommendation System</h1>
+        </div>
+        <div id="menuBar">
+            <a href="{{url_for('recommendation')}}" id="menuBarItem">Reccomendations</a> 
+            <a href="{{url_for('moviepage')}}" id="menuBarItem">Top Rated</a>
+        </div>
+
+
+    </div>
+    <div class="container">
+        <div onclick="location.href='html/moviepage.html'" id="movieBox">
+            <h3 id="movieBoxTitle"->{{test}}</h3>
+            <p id="movieBoxDate">MM/DD/YYYY</p>
+            <p id="movieBoxRating">1.0/10.0</p>
+            <p id="movieBoxDescription">Blend your style and experience on a global, competitive stage. You have 13 rounds to attack and defend your side using sharp gunplay and tactical abilities. And, with one life per-round, you'll need to think faster than your opponent if you want to survive. Take on foes across Competitive and Unranked modes as well as Deathmatch and Spike Rush.</p>
+        </div>
+        <div onclick="location.href='html/moviepage.html'" id="movieBox">
+            <h3 id="movieBoxTitle">MOVIE TITLE</h3>
+            <p id="movieBoxDate">MM/DD/YYYY</p>
+            <p id="movieBoxRating">1.0/10.0</p>
+            <p id="movieBoxDescription">Blend your style and experience on a global, competitive stage. You have 13 rounds to attack and defend your side using sharp gunplay and tactical abilities. And, with one life per-round, you'll need to think faster than your opponent if you want to survive. Take on foes across Competitive and Unranked modes as well as Deathmatch and Spike Rush.</p>
+        </div>
+        <div onclick="location.href='html/moviepage.html'" id="movieBox">
+            <h3 id="movieBoxTitle">MOVIE TITLE</h3>
+            <p id="movieBoxDate">MM/DD/YYYY</p>
+            <p id="movieBoxRating">1.0/10.0</p>
+            <p id="movieBoxDescription">Blend your style and experience on a global, competitive stage. You have 13 rounds to attack and defend your side using sharp gunplay and tactical abilities. And, with one life per-round, you'll need to think faster than your opponent if you want to survive. Take on foes across Competitive and Unranked modes as well as Deathmatch and Spike Rush.</p>
+        </div>
+        
+    </div>
+
+    <div id="recommendationRedirector">
+        <div id="recRedLeft">
+            <h1>Find Your Movie!</h1><br>
+            <h3>Use our movie recommender to find some movies that suit your personal tastes!</h3>
+        </div>
+        <div id="recRedRight">
+            <button>Discover ></button>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

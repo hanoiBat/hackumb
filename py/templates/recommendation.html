@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" type="text/css" href="/static/simple.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+    
+</head>
+<body>
+    
+    <div id="titlebar">
+        <div id = "title">
+            <a href="{{url_for('index')}}"><h1 id="websitename">Movie Recommendation System</h1></a>
+        </div>
+        <div id="menuBar">
+            <a href="{{url_for('recommendation')}}" id="menuBarItem">Reccomendations</a> 
+            <a href="" id="menuBarItem">Top Rated</a>
+        </div>
+
+    </div>
+
+    <h3 style="display: flex; justify-content: center;">Select some movies that you enjoyed to personalize your recomendations!</h3>
+    <div class="movieNameContainer">
+        <div class="scroll-wrapper">
+            <div class="scroll-content">
+                <button class="movieTitle" onclick="returnList.push('Baby\'s Day Out')" id="babys_day_out"><img src="https://upload.wikimedia.org/wikipedia/en/3/35/Babys_day_out_poster.jpg"></button>
+                <button class="movieTitle" onclick="returnList.push('Superbad')" id="superbad"><img src="https://upload.wikimedia.org/wikipedia/en/8/8b/Superbad_Poster.png"></button>
+                <button class="movieTitle" onclick="returnList.push('Ted')" id="ted"><img src="https://upload.wikimedia.org/wikipedia/en/d/d4/Ted_%28film%29.png"></button>
+                <button class="movieTitle" onclick="returnList.push('Jumanji: Welcome to the Jungle')" id="jumanji_new"><img src="https://upload.wikimedia.org/wikipedia/en/d/dc/Jumanji_Welcome_to_the_Jungle.png"></button>
+                <button class="movieTitle" onclick="returnList.push('Spider-Man: Across the Spider-Verse')" id="across_the_spiderverse"><img src="https://upload.wikimedia.org/wikipedia/en/b/b4/Spider-Man-_Across_the_Spider-Verse_poster.jpg"></button>
+                <button class="movieTitle" onclick="returnList.push('Avatar')" id="james_cameron_avatar"><img src="https://upload.wikimedia.org/wikipedia/en/d/d6/Avatar_%282009_film%29_poster.jpg"></button>
+                <button class="movieTitle" onclick="returnList.push('Barbie')" id="barbie"><img src="https://upload.wikimedia.org/wikipedia/en/0/0b/Barbie_2023_poster.jpg"></button>
+                <button class="movieTitle" onclick="returnList.push('The Philosopher\'s Stone')" id="harry_potter"><img src="https://upload.wikimedia.org/wikipedia/en/7/7a/Harry_Potter_and_the_Philosopher%27s_Stone_banner.jpg"></button>
+                <button class="movieTitle" onclick="returnList.push('Lord of the Rings')" id="lord_of_the_rings"><img src="https://upload.wikimedia.org/wikipedia/en/8/8a/The_Lord_of_the_Rings%2C_TFOTR_%282001%29.jpg"></button>
+                <button class="movieTitle" onclick="returnList.push('Mall Cop')" id="mall_cop"><img src="https://upload.wikimedia.org/wikipedia/en/9/95/Paul_blart_mall_cop_film.jpg"></button>
+                <button class="movieTitle" onclick="returnList.push('Glass Onion')" id="glass_onion"><img src="https://upload.wikimedia.org/wikipedia/en/6/62/Glass_Onion_poster.jpg"></button>
+                <button class="movieTitle" onclick="returnList.push('The Batman')" id="the_batman"><img src="https://upload.wikimedia.org/wikipedia/en/f/ff/The_Batman_%28film%29_poster.jpg"></button>
+                <button class="movieTitle" onclick="returnList.push('It')" id="it"><img src="https://upload.wikimedia.org/wikipedia/en/5/5a/It_%282017%29_poster.jpg"></button>
+                <button class="movieTitle" onclick="returnList.push('Jeepers Creepers')"id="jeepers_creepers"><img src="https://upload.wikimedia.org/wikipedia/en/6/60/Jeepers_Creepers_%282001_film%29_poster.jpg"></button>
+                <button class="movieTitle" onclick="returnList.push('Friday The 13th')" id="friday_the_13th"><img src="https://upload.wikimedia.org/wikipedia/en/2/2c/Friday_the_13th_%281980%29_theatrical_poster.jpg"></button>
+                <button class="movieTitle" onclick="returnList.push('The Conjuring')" id="the_conjuring"><img src="https://upload.wikimedia.org/wikipedia/en/8/8c/The_Conjuring_poster.jpg"></button>
+                <button class="movieTitle" onclick="returnList.push('Smile')" id="smile"><img src="https://upload.wikimedia.org/wikipedia/en/7/7f/Smile_%282022_film%29.jpg"></button>
+                <button class="movieTitle" onclick="returnList.push('Clue')" id="clue"><img src="https://upload.wikimedia.org/wikipedia/en/1/18/Clue_Poster.jpg"></button>
+                <button class="movieTitle" onclick="returnList.push('Death on the Nile')" id="death_on_the_nile"><img src="https://upload.wikimedia.org/wikipedia/en/e/e9/Death_on_the_Nile_%282020_film%29_poster.png"></button>
+                <button class="movieTitle" onclick="returnList.push('A New Hope')" id="a_new_hope"><img src="https://upload.wikimedia.org/wikipedia/en/8/87/StarWarsMoviePoster1977.jpg"></button>
+                <button class="movieTitle" onclick="returnList.push('Interstellar')" id="interstellar"><img src="https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg"></button>
+                <button class="movieTitle" onclick="returnList.push('Extraction')" id="extraction"><img src="https://upload.wikimedia.org/wikipedia/en/8/89/Extraction_%282020_film%29.png"></button>
+                <button class="movieTitle" onclick="returnList.push('Inception')" id="inception"><img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg"></button>
+                <button class="movieTitle" onclick="returnList.push('Avengers Endgame')" id="avengers_endgame"><img src="https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg"></button>
+                <button class="movieTitle" onclick="returnList.push('Mean Girls')" id="mean_girls"><img src="https://upload.wikimedia.org/wikipedia/en/a/ac/Mean_Girls_film_poster.png"></button>
+                <button class="movieTitle" onclick="returnList.push('Titanic')" id="titanic"><img src="https://upload.wikimedia.org/wikipedia/en/1/18/Titanic_%281997_film%29_poster.png"></button>
+                <button class="movieTitle" onclick="returnList.push('The Nun')" id="nun"><img src="https://upload.wikimedia.org/wikipedia/en/3/34/TheNunPoster.jpg"></button>
+                
+            </div>
+        </div>
+    </div>
+    <button id="submitRecommendationsButton" href="{{url_for('output')}}">METRO BUTTON 2: ELECTRIC BOOGALOO</button>
+    <a href="{{url_for('output')}}">Next Page</a>
+    
+    <script>
+
+        var returnList = []
+        document.getElementById("submitRecommendationsButton").addEventListener("click", function(){
+            if(returnList.length>2){
+                const dataToSend = returnList;
+            console.log(dataToSend)
+            fetch('/receive-data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dataToSend)
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle the response from the server here
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+            } else {
+                alert("Please select at least 3 movies!");
+            }
+           
+        })
+        
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

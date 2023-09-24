@@ -1,0 +1,174 @@
+@keyframes size{
+    from {font-size: 1em;}
+    from {background-color: black;}
+    to {background-color: red;}
+    to {font-size: 1.5em;}
+}
+
+@keyframes unsize{
+    from {font-size: 1.5em;}
+    from {background-color: red;}
+    to {background-color: black;}
+    to {font-size:1 em;}
+}
+
+@keyframes movieBoxColorChange{
+    from {background-color: gainsboro;}
+    to {background-color: beige;}
+}
+
+#title{
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+a, #websitename{
+    text-decoration:none;
+    color:white;
+}
+
+#titlebar{
+    background-color: black;
+    color:white;
+    font-family: 'Rubik', sans-serif;
+    margin: 1em;
+    padding: 1em;
+}
+
+#menuBar{
+    display: flex;
+    justify-content: center;
+    height: 2em;
+}
+
+#menuBarItem{
+    padding-left: 1em;
+    padding-right: 1em;
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+    border-radius: 10em;
+}
+
+#menuBarItem:hover{
+    animation-name: size;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#menuBarItem{
+    animation-name: unsize;
+    animation-duration: 1s;
+    animation-fill-mode:forwards;
+}
+
+.container{
+    display:flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+#movieBox{
+    border-radius: 5px;
+    background-color: gainsboro;
+    margin: 1em;
+    padding: 0.5em;
+    width: auto;
+}
+
+#movieBox:hover{
+    animation-name: movieBoxColorChange;
+    animation-direction: 2s;
+    animation-fill-mode: forwards;
+}
+
+ion-icon{
+    color: white;
+    font-size: 1.5em;
+}
+
+#searchIcon{
+    padding-left: 1em;
+    padding-right: 1em;
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    display: flex;
+    justify-content: end;
+    vertical-align: top;
+    background-color: #b60f0f;
+    border-radius: 1em;
+    margin-left: 0.5em;
+}
+
+.searchbox{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#searchInput{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #b60f0f;
+    background-color: black;
+    color: white;
+}
+
+#recommendationRedirector{
+    font-family: 'Rubik', sans-serif;
+    display:flex;
+    flex-direction: row;
+    border-radius: 5px;
+    background-color: gainsboro;
+    margin: 1em;
+    padding: 0.5em;
+    width: auto;
+}
+
+#recRedRight{
+    display: flex;
+    align-self: center;
+    margin-left: auto;
+    margin-right: 40%;
+    width: auto;
+    justify-content: end;
+}
+
+img, #movieContainerItem{
+    width: 50%;
+    height: 50%;
+}
+
+#movieContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.scroll-wrapper {
+    width: 100%; /* Set the width of the wrapper */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent items from wrapping */
+}
+
+.scroll-content {
+    width: 120%; /* Set the width of the content */
+    padding: 20px; /* Add padding or adjust as needed */
+}
+
+.item {
+    display: inline-block; /* Display items in a row */
+    width: 200px; /* Set the width of each item */
+    height: 200px; /* Set the height of each item */
+    background-color: #ccc; /* Add background color or styles */
+    margin-right: 20px; /* Add margin between items */
+}
